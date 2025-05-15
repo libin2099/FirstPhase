@@ -9,9 +9,7 @@ func main() {
 	strrunes := []rune(str)
 	length := len(strrunes)
 	for i := 0; i < length/2; i++ {
-		temp := strrunes[i]
-		strrunes[i] = strrunes[length-i-1]
-		strrunes[length-i-1] = temp
+		strrunes[i], strrunes[length-i-1] = strrunes[length-i-1], strrunes[i]
 	}
 
 	fmt.Println(string(strrunes))
